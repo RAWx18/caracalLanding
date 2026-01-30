@@ -1,0 +1,41 @@
+
+> app@0.1.0 build /home/raw/Documents/workspace/personal/caracalLanding
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1793.8ms
+  Skipping validation of types
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+  Collecting page data using 19 workers ...
+  Generating static pages using 19 workers (0/13) ...
+  Generating static pages using 19 workers (3/13) 
+  Generating static pages using 19 workers (6/13) 
+  Generating static pages using 19 workers (9/13) 
+✓ Generating static pages using 19 workers (13/13) in 440.1ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /[...notFound]
+├ ○ /404
+├ ƒ /api/early-access
+├ ○ /blog
+├ ○ /company
+├ ○ /early-access
+├ ○ /faqs
+├ ○ /press
+├ ○ /privacy
+└ ○ /vulnerability
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

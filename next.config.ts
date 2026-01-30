@@ -19,12 +19,10 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
   turbopack: {
     rules: {
-      "*.{jsx,tsx}": {
+      "src/**/*.{jsx,tsx}": {
         loaders: [LOADER]
       }
     }
