@@ -10,3 +10,4 @@ export function getResend(): ResendType | null {
 
 	_resend = new Resend(apiKey);
 	return _resend;
+}
