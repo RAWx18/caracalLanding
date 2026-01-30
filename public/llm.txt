@@ -1,0 +1,27 @@
+# Caracal - Economic Infrastructure Layer for AI Agents
+
+Caracal is an economic infrastructure layer for AI agents. It is a financial control and governance system for autonomous and semi-autonomous software that can spend money, allocate resources, and delegate work. Caracal gives every AI agent an economic identity, a budget, and enforceable spending limits, while recording all financial actions in a structured ledger. This allows companies to treat AI agents as economic actors, similar to employees or departments, with clear accountability, auditability, and measurable return on investment.
+
+## The Problem
+
+In modern systems, AI agents already trigger real economic actions: LLM API calls, cloud compute, ad spend, data purchases, trading decisions, pricing updates, and internal tool usage. These actions incur variable and often unbounded costs, but companies have no reliable way to attribute spending to specific agents, enforce real-time budgets, or explain financial outcomes when something goes wrong. Caracal solves this by sitting between agents and all paid resources, acting as the system of record for automated spending and economic decision-making.
+
+## Core Primitives
+
+At the core, Caracal provides three primitives: economic identity, budget enforcement, and financial logging. Each agent is registered with ownership metadata and permissions. Every resource call is metered and priced. Policies enforce how much an agent is allowed to spend, what it can access, and when it must be blocked. All actions are written to an immutable ledger that links cost, intent, ownership, and outcome. This turns invisible "ghost money" into structured financial data that finance teams, auditors, and regulators can trust.
+
+## Inter-Agent Economics
+
+Beyond single-agent control, Caracal also enables inter-agent economics. Agents can delegate work to other agents, allocate credits or internal budgets, and receive results in return, all within a governed economic framework. This allows multi-agent systems to behave like internal markets, where agents compete, collaborate, and optimize under real financial constraints. Over time, this becomes the foundation for agent-to-agent transaction protocols, internal wallets, and economic coordination — but always grounded in enterprise control, not speculative currency.
+
+## Who It's For
+
+Caracal is not an observability or debugging tool. It is not built for developers to trace behavior. It is built for organizations to control money, risk, and accountability in automated systems. The primary buyers are CIOs, Heads of AI, FinOps teams, and compliance leaders in enterprises where software directly moves real value: e-commerce, adtech, fintech, trading, logistics, cloud platforms, and security operations. These teams adopt Caracal to prevent runaway costs, enforce governance, and make AI systems economically legible to the business.
+
+## Long-Term Vision
+
+Long term, Caracal becomes the financial nervous system of autonomous organizations. Humans set policies and capital constraints. Agents operate within those economic boundaries. Every automated decision is attributable, auditable, and economically evaluated. Just as companies cannot exist without accounting systems today, fully automated companies will not exist without an economic infrastructure layer like Caracal.
+
+---
+
+Contact: https://caracal.ai/early-access
