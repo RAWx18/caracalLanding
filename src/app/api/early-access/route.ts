@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
 import { resend } from '@/lib/resend';
 import { getEarlyAccessEmailHtml } from '@/lib/email-template';
 
@@ -12,13 +12,19 @@ export async function POST(req: Request) {
     }
 
     // 1. Insert into Supabase
+    const supabase = getSupabase();
+    if (!supabase) {
+      console.error('Supabase environment variables are not configured.');
+      return NextResponse.json({ error: 'Server misconfiguration' }, { status: 500 });
+    }
+
     const { error: dbError } = await supabase
       .from('early_access_signups')
-      .upsert({ 
-        email, 
-        first_name: firstName, 
-        last_name: lastName, 
-        company 
+      .upsert({
+        email,
+        first_name: firstName,
+        last_name: lastName,
+        company,
       }, { onConflict: 'email' });
 
     if (dbError) {
