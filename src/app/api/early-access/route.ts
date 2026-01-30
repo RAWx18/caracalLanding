@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getSupabase } from '@/lib/supabase';
-import { resend } from '@/lib/resend';
+import { getResend } from '@/lib/resend';
 import { getEarlyAccessEmailHtml } from '@/lib/email-template';
 
 export async function POST(req: Request) {
@@ -11,38 +10,23 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
 
-    // 1. Insert into Supabase
-    const supabase = getSupabase();
-    if (!supabase) {
-      console.error('Supabase environment variables are not configured.');
-      return NextResponse.json({ error: 'Server misconfiguration' }, { status: 500 });
-    }
+    // Optional: persist signup to an external DB (removed Supabase dependency).
+    // This deployment doesn't require a DB; we skip persistence when not configured.
 
-    const { error: dbError } = await supabase
-      .from('early_access_signups')
-      .upsert({
-        email,
-        first_name: firstName,
-        last_name: lastName,
-        company,
-      }, { onConflict: 'email' });
-
-    if (dbError) {
-      console.error('Database error:', dbError);
-      return NextResponse.json({ error: 'Failed to register. Please try again.' }, { status: 500 });
-    }
-
-    // 2. Send confirmation email via Resend
+    // 2. Send confirmation email via Resend (only if API key configured)
     try {
-      await resend.emails.send({
-        from: 'Caracal <onboarding@resend.dev>',
-        to: email,
-        subject: 'Access Granted (Pending) | Caracal.ai',
-        html: getEarlyAccessEmailHtml(firstName || 'there'),
-      });
+      const resend = getResend();
+      if (resend) {
+        await resend.emails.send({
+          from: 'Caracal <onboarding@resend.dev>',
+          to: email,
+          subject: 'Access Granted (Pending) | Caracal.ai',
+          html: getEarlyAccessEmailHtml(firstName || 'there'),
+        });
+      } else {
+        console.warn('RESEND_API_KEY not set; skipping confirmation email.');
+      }
     } catch (emailError) {
-      // We don't want to fail the whole request if email fails, 
-      // but we should log it.
       console.error('Email error:', emailError);
     }
 
