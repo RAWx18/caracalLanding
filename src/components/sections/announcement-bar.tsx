@@ -19,7 +19,7 @@ const AnnouncementBar = () => {
           className="flex gap-2 items-center hover:opacity-80 transition-opacity group"
         >
           <span className="text-white font-mono text-center text-[10px] sm:text-[12px] font-bold uppercase tracking-tight group-hover:underline decoration-neutral-500 underline-offset-4">
-            Open-source Caracal, built with industry to make AI agents financially intelligent
+            Open-source Caracal, built with community to make AI agents financially intelligent
           </span>
           <svg 
             className="fill-white transition-transform duration-200 group-hover:translate-x-1" 

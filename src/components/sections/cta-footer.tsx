@@ -15,18 +15,20 @@ const CTAFooter: React.FC = () => {
 
           <div className="flex flex-col gap-2 relative z-10">
             <h2 className="text-white font-mono text-2xl sm:text-4xl font-bold leading-tight uppercase tracking-tight">
-              Turn your team into <br className="sm:hidden" /> an AI powerhouse
+              Caracal OpenSource is now available
             </h2>
             <p className="text-[#999999] font-sans text-lg">
-              The financial nervous system of autonomous organizations.
+              Install the latest version of Caracal directly from the Python Package Index.
             </p>
           </div>
-          <Link
-            href="/early-access"
+          <a
+            href="https://pypi.org/project/caracal-core"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#cdff3e] text-[#0a0a0a] font-mono text-[14px] font-bold px-10 py-5 rounded-[2px] uppercase tracking-wider hover:shadow-[0px_0px_48px_0px_rgba(205,255,62,0.32)] transition-all duration-300 relative z-10"
           >
-            GET EARLY ACCESS
-          </Link>
+            View on PyPI
+          </a>
         </div>
       </div>
 
@@ -62,14 +64,17 @@ const CTAFooter: React.FC = () => {
                 <Link href="/company" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
                   COMPANY
                 </Link>
-                <Link href="/blog" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
+                {/* <Link href="/blog" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
                   BLOG
-                </Link>
+                </Link> */}
                 <Link href="/faqs" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
                   FAQ
                 </Link>
                 <Link href="/press" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
-                  PRESS MEDIA KIT
+                  PRESS
+                </Link>
+                <Link href="https://github.com/Garudex-Labs/caracal" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
+                  REPOSITORY
                 </Link>
               </nav>
             </div>
@@ -81,13 +86,13 @@ const CTAFooter: React.FC = () => {
               </h4>
               <nav className="flex flex-col gap-5">
                 <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
-                  X
+                  X (upcoming)
                 </a>
                 <a href="https://github.com/garudex-Labs" target="_blank" rel="noopener noreferrer" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
                   GITHUB
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white font-mono text-[12px] uppercase font-bold hover:text-[#cdff3e] transition-colors">
-                  LINKEDIN
+                  LINKEDIN (upcoming)
                 </a>
               </nav>
             </div>

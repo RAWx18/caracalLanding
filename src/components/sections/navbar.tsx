@@ -26,7 +26,7 @@ const Navbar = () => {
         rel="noopener noreferrer"
           >
         <span className="text-black group-hover:underline font-mono text-[10px] sm:text-[12px] font-bold text-center uppercase tracking-tight">
-          Open-source Caracal, built with industry to make AI agents financially intelligent
+          Open-source Caracal, built with community to make AI agents financially intelligent
         </span>
         <svg
           className="stroke-black transition-transform group-hover:translate-x-1"
@@ -70,16 +70,29 @@ const Navbar = () => {
                 <div className="hidden gap-8 lg:flex lg:items-center">
                   <div className="flex gap-8 items-center">
                     <Link
+                      href="/"
+                      className="font-mono text-[12px] font-bold text-white uppercase tracking-wider hover:text-[#cdff3e] transition-colors duration-300"
+                    >
+                      HOME
+                    </Link>
+                    <Link
                       href="/company"
                       className="font-mono text-[12px] font-bold text-white uppercase tracking-wider hover:text-[#cdff3e] transition-colors duration-300"
                     >
                       COMPANY
                     </Link>
-                    <Link
+                    {/* BLOG SECTION WILL BE ADDED AS SOON AS WE GET SOME BLOGS */}
+                    {/* <Link
                       href="/blog"
                       className="font-mono text-[12px] font-bold text-white uppercase tracking-wider hover:text-[#cdff3e] transition-colors duration-300"
                     >
                       BLOG
+                    </Link> */}
+                    <Link
+                      href="/press"
+                      className="font-mono text-[12px] font-bold text-white uppercase tracking-wider hover:text-[#cdff3e] transition-colors duration-300"
+                    >
+                      PRESS
                     </Link>
                     <Link
                       href="/faqs"

@@ -1,34 +1,33 @@
 "use client";
 
-import React from 'react';
-import { Shield, Key, Cloud, Search } from 'lucide-react';
+import { Shield, Wallet, Database, Network } from 'lucide-react';
 
 const EnterpriseReady = () => {
   const features = [
-    {
-      title: "SSO & Role-Based\nAccess Control",
-      description: "Manage Caracal at scale with SSO, SCIM provisioning, and fine-grained RBAC. Define who can govern agents, tools, and policies across teams with precision and auditability.",
-      icon: <Shield className="w-6 h-6 text-[#cdff3e]" />,
-      bgImage: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/92cbf2d5-7d30-4b08-962c-b9bdc09a1f45-keycard-ai/assets/images/images_2.png"
-    },
-    {
-      title: "Bring Your Own Keys (BYOK)",
-      description: "Root Caracal's encryption and signing operations in your own Key Management Service, AWS KMS, GCP KMS, Azure Key Vault, or on-prem. Maintain complete control and auditability.",
-      icon: <Key className="w-6 h-6 text-[#cdff3e]" />,
-      bgImage: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/92cbf2d5-7d30-4b08-962c-b9bdc09a1f45-keycard-ai/assets/images/images_3.png"
-    },
-    {
-      title: "Enterprise Cloud\nDeployment",
-      description: "Flexible control-plane and data-plane separation provides isolation, network control, and compliance, all within Caracal's fully managed enterprise cloud.",
-      icon: <Cloud className="w-6 h-6 text-[#cdff3e]" />,
-      bgImage: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/92cbf2d5-7d30-4b08-962c-b9bdc09a1f45-keycard-ai/assets/images/images_4.png"
-    },
-    {
-      title: "Continuous Audit\nIntegration",
-      description: "Connect Caracal's audit stream to your SIEM and monitoring tools to extend visibility into agent activity. Enable real-time detection and compliance.",
-      icon: <Search className="w-6 h-6 text-[#cdff3e]" />,
-      bgImage: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/92cbf2d5-7d30-4b08-962c-b9bdc09a1f45-keycard-ai/assets/images/images_5.png"
-    }
+  {
+    title: "Economic Identity &\nAgent Budgets",
+    description: "Assign every AI agent a unique economic identity with enforceable budgets and spending limits. Control how much each agent can spend across LLMs, APIs, tools, and inter-agent workflows.",
+    icon: <Wallet className="w-6 h-6 text-[#cdff3e]" />,
+    bgimage: ""
+  },
+  {
+    title: "Real-Time Budget\nEnforcement",
+    description: "Enforce financial policies at runtime using gateways and sidecars. Agents cannot execute paid actions unless they pass budget checks and policy evaluation.",
+    icon: <Shield className="w-6 h-6 text-[#cdff3e]" />,
+    bgimage: ""
+  },
+  {
+    title: "Immutable Financial\nLedger",
+    description: "Record every economic action in an append-only, tamper-resistant ledger linking cost, intent, ownership, and outcome for audits and compliance.",
+    icon: <Database className="w-6 h-6 text-[#cdff3e]" />,
+    bgimage: ""
+  },
+  {
+    title: "Inter-Agent\nEconomic Control",
+    description: "Enable agents to delegate work with explicit budgets and constraints. All inter-agent transactions are metered, settled, and logged under governed economic rules.",
+    icon: <Network className="w-6 h-6 text-[#cdff3e]" />,
+    bgimage: ""
+  }
   ];
 
   return (

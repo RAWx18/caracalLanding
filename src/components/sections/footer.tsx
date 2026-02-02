@@ -63,7 +63,7 @@ const Footer = () => {
               Build next-generation products
             </h3>
             <p className="text-[14px] leading-relaxed text-[#a1a1aa] font-sans">
-              Evolve your products into agentic platforms. Caracal connect agents to your platform securely, allowing your users to delegate work and execute transactions confidently with full control, visibility, and accountability for every agent action.
+              An economic infrastructure layer for AI agents that enforces budgets, tracks spending, and records all economic actions across LLMs, APIs, tools, and inter-agent workflows
             </p>
           </div>
         </div>

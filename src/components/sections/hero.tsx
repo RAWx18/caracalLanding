@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col justify-center items-center px-5 pt-[180px] pb-[120px] sm:pt-[220px] sm:pb-[140px] desktop:pt-[220px] desktop:pb-[180px] min-h-[600px] sm:min-h-[720px] w-full isolate overflow-hidden">
+    <section className="relative flex flex-col justify-center items-center px-5 pt-[180px] pb-[120px] sm:pt-[220px] sm:pb-[140px] desktop:pt-[220px] desktop:pb-[180px] min-h-[600px] sm:min-h-[800px] w-full isolate overflow-hidden">
       {/* Background Grid Pattern Overlay */}
       {/* Replicating the structure from html_structure where multiple divs with aspect-square create the grid */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none opacity-25">
@@ -34,7 +34,7 @@ const HeroSection = () => {
           {/* Call to Action Link */}
           <div className="flex items-center mt-6 group">
             <a
-              href="#"
+              href="/early-access"
               className="flex items-center gap-2 text-[#cdff3e] font-mono font-bold text-[12px] tracking-widest uppercase hover:opacity-80 transition-all duration-300"
             >
               GET EARLY ACCESS

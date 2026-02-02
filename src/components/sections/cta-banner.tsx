@@ -32,7 +32,7 @@ const CtaBanner: React.FC = () => {
 
           <div className="relative z-10">
             <a 
-              href="#"
+              href="/early-access"
               className="inline-flex items-center justify-center bg-[#cdff3e] text-[#0a0a0a] px-8 py-4 text-[14px] desktop:text-[16px] font-mono font-bold uppercase tracking-widest transition-all duration-300 ease-in-out hover:shadow-[0px_0px_48px_0px_rgba(205,255,62,0.32)] hover:brightness-110 active:scale-95 whitespace-nowrap"
               style={{ borderRadius: '2px' }}
             >

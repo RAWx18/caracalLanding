@@ -4,17 +4,27 @@ import CTAFooter from "@/components/sections/cta-footer";
 
 export default function PressPage() {
   const news = [
-    {
-      date: "JAN 30, 2026",
-      source: "OpenSource Security",
-      title: "Caracal starts with opensoure release",
-    },
+  {
+    date: "JAN 28, 2026",
+    source: "Company Update",
+    title: "Caracal goes open source for transparency",
+  },
+  {
+    date: "FEB 1, 2026",
+    source: "Product Release",
+    title: "ASE (Agent Settlement Extension) released on PyPI",
+  },
+  {
+    date: "FEB 2, 2026",
+    source: "Product Release",
+    title: "Caracal v0.1.0 open source released on PyPI",
+  },
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-[#0a0a0a]">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-10">
         <SubpageHero 
           badge="RESOURCES"
           title="PRESS & MEDIA KIT"

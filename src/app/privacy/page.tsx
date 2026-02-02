@@ -6,7 +6,7 @@ export default function PrivacyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0a0a0a]">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-10">
         <SubpageHero 
           badge="LEGAL"
           title="PRIVACY POLICY"

@@ -45,14 +45,13 @@ export default function EarlyAccessPage() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0a0a0a] text-white font-sans">
       <Navbar />
-      
       <main className="flex-grow flex items-center justify-center px-6 pt-[116px] sm:pt-[160px]">
         <div className="w-full max-w-[1200px]">
             <div className="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="order-1 lg:order-1">
               <div className="mb-6">
               <h1 className={`text-4xl md:text-5xl font-mono font-bold tracking-tighter mb-4 text-[#cdff3e] transition-transform duration-700 will-change-transform`}>REQUEST ACCESS</h1>
-              <p className="text-[#999999] text-lg max-w-md">Join the waitlist for Caracal. Infrastructure for trusted AI agents.</p>
+              <p className="text-[#999999] text-lg max-w-md">Join the waitlist for Caracal Enterprise. Infrastructure for trusted AI agents.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">

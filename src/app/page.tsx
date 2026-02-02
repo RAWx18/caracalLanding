@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#0a0a0a]">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-10">
         <HeroSection />
         <MissionSection />
         <CapabilitiesFlow />
