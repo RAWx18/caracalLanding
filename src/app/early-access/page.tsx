@@ -61,7 +61,7 @@ export default function EarlyAccessPage() {
               <input
                 required
                 type="text"
-                placeholder="RYAN"
+                placeholder="FIRST_NAME"
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 className="w-full bg-black border border-[#1a1a1a] p-4 text-white font-mono focus:border-[#cdff3e] focus:outline-none transition-colors"
@@ -72,7 +72,7 @@ export default function EarlyAccessPage() {
               <input
                 required
                 type="text"
-                placeholder="CARACAL"
+                placeholder="LAST_NAME"
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                 className="w-full bg-black border border-[#1a1a1a] p-4 text-white font-mono focus:border-[#cdff3e] focus:outline-none transition-colors"
@@ -85,7 +85,7 @@ export default function EarlyAccessPage() {
               <input
               required
               type="email"
-              placeholder="RYAN@GARUDEXLABS.COM"
+              placeholder="USERID@COMPANY.COM"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className="w-full bg-black border border-[#1a1a1a] p-4 text-white font-mono focus:border-[#cdff3e] focus:outline-none transition-colors"
@@ -97,7 +97,7 @@ export default function EarlyAccessPage() {
               <input
               required
               type="text"
-              placeholder="GARUDEX LABS"
+              placeholder="COMPANY"
               value={formData.company}
               onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               className="w-full bg-black border border-[#1a1a1a] p-4 text-white font-mono focus:border-[#cdff3e] focus:outline-none transition-colors"
@@ -128,7 +128,7 @@ export default function EarlyAccessPage() {
             <div className="order-2 lg:order-2 flex justify-center lg:justify-end mt-6 lg:mt-18">
               <div className="relative w-[320px] h-[220px] sm:w-[550px] rounded-md overflow-visible">
               <img
-                src="/early.jpg"
+                src="beta.webp"
                 alt="Decorative"
                 className="object-cover rounded-md"
               />
