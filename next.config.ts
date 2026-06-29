@@ -5,6 +5,17 @@ const LOADER = path.resolve(__dirname, 'src/visual-edits/component-tagger-loader
 
 const nextConfig: NextConfig = {
   output: 'standalone',
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/:path*',
+          has: [{ type: 'host', value: 'docs.garudexlabs.com' }],
+          destination: '/context7.json',
+        },
+      ],
+    };
+  },
   images: {
     remotePatterns: [
       {
