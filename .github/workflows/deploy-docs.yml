@@ -3,9 +3,6 @@ name: Deploy docs.garudexlabs.com
 on:
   push:
     branches: ["main"]
-    paths:
-      - 'public/context7.json'
-      - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
 permissions:
