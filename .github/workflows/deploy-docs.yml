@@ -1,0 +1,35 @@
+name: Deploy docs.garudexlabs.com
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'public/context7.json'
+      - '.github/workflows/deploy-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site directory
+        run: |
+          mkdir docs_site
+          cp public/context7.json docs_site/
+          echo "docs.garudexlabs.com" > docs_site/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs_site
+          publish_branch: gh-pages
+          force_orphan: true
+          commit_message: "Deploy docs.garudexlabs.com to GitHub Pages"
