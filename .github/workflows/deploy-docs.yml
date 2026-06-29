@@ -2,18 +2,26 @@ name: Deploy docs.garudexlabs.com
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
     paths:
       - 'public/context7.json'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  deploy-docs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,13 +31,17 @@ jobs:
         run: |
           mkdir docs_site
           cp public/context7.json docs_site/
+          # Ensure custom domain is used
           echo "docs.garudexlabs.com" > docs_site/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs_site
-          publish_branch: gh-pages
-          force_orphan: true
-          commit_message: "Deploy docs.garudexlabs.com to GitHub Pages"
+          path: './docs_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
